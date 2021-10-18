@@ -1,0 +1,15 @@
+diff --git a/node_modules/@remix-run/architect/server.js b/node_modules/@remix-run/architect/server.js
+index 3de86dd..26b192d 100644
+--- a/node_modules/@remix-run/architect/server.js
++++ b/node_modules/@remix-run/architect/server.js
+@@ -65,9 +65,8 @@ function createRemixHeaders(requestHeaders, requestCookies) {
+ }
+ function createRemixRequest(event) {
+   let host = event.headers["x-forwarded-host"] || event.headers.host;
+-  let proto = event.requestContext.http.protocol || "https";
+   let search = event.rawQueryString.length ? `?${event.rawQueryString}` : "";
+-  let url$1 = new url.URL(event.rawPath + search, `${proto}://${host}`);
++  let url$1 = new url.URL(event.rawPath + search, `https://${host}`);
+   return new node.Request(url$1.toString(), {
+     method: event.requestContext.http.method,
+     headers: createRemixHeaders(event.headers, event.cookies),
