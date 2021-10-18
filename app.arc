@@ -8,6 +8,7 @@ arc-test
 
 @static
 
-# @aws
-# profile default
-# region us-west-1
+@aws
+profile personal
+region us-east-1
+runtime nodejs14.x
