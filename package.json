@@ -17,7 +17,7 @@
     "react-router-dom": "6.0.0-beta.6",
     "remix": "^0.19.3",
     "@remix-run/architect": "^0.19.3",
-    "aws-sdk": "2.796.0"
+    "aws-sdk": "2.1030.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.24",
